@@ -1,0 +1,23 @@
+.wrapper {
+  size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  & .MuiButton-root {
+    margin: 20px 0 0 0;
+    width: 100%;
+  }
+  margin: auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
