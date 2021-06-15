@@ -1,19 +1,12 @@
-.wrapper {
-  size: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
 .container {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   & .MuiButton-root {
     margin: 20px 0 0 0;
-    width: 100%;
+    width: 15%;
   }
-  margin: auto;
 }
 
 .form {
