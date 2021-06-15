@@ -1,12 +1,12 @@
 import axios from 'axios';
 
 export class LoginService {
-  public static async sendLoginRequest(): Promise<void> {
+  public static async sendLoginRequest(): Promise<number> {
     const response = await axios.post(
-      'URL HERE',
+      'https://run.mocky.io/v3/7b9c45e2-62c4-4862-b5a7-4bd0aab9f5d2',
       {},
     );
-    return response.data;
+    return response.status;
   }
 }
 

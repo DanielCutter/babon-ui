@@ -1,14 +1,24 @@
 import { Button, TextField } from '@material-ui/core';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import LoginService from '../../services/Login/login.service';
 import './LoginStyles.scss';
 
 const Login: React.FC = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLoginSubmit = (): void => {
-    console.log('login todo');
+  const handleLoginSubmit = async (): Promise<void> => {
+    try {
+      const data = await LoginService.sendLoginRequest();
+      console.log(data);
+    } catch (e) {
+      console.log(e);
+    }
   };
+
+  useEffect(() => {
+    handleLoginSubmit();
+  }, []);
 
   const updateUsername = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setUsername(event.target.value);
